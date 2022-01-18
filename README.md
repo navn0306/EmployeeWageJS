@@ -18,3 +18,6 @@ Calculate Wages till a condition of total working hours of 160 or max days of 20
 UseCase 6 -
 Store the Daily Wage along with the Total Wage.
 - Save in an Array the Daily Wage.
+
+UseCase 7 -
+Use the Daily Wage Array perform following operations using Array Helper Functions.
