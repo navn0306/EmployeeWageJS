@@ -24,3 +24,9 @@ Use the Daily Wage Array perform following operations using Array Helper Functio
 
 UseCase 8 -
 Store the Day and the Daily Wage along with the Total Wage.
+
+UseCase 9 -
+Use the Daily Wage Map and Daily Hour Map perform following operations using Arrow Functions.
+
+UseCase 10 -
+Ability to store the Day, Hours Worked and Wage Earned in a single object.
