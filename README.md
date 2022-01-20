@@ -30,3 +30,10 @@ Use the Daily Wage Map and Daily Hour Map perform following operations using Arr
 
 UseCase 10 -
 Ability to store the Day, Hours Worked and Wage Earned in a single object.
+
+useCase 11 -
+Perform following Objectoperations using Arrow Functions.
+a. Calc total Wage and total hours worked.
+b. Show the full workings days using foreach.
+c. Show Part working days using Map by reducing to String Array.
+d. No working days only using Map function.

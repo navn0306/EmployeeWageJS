@@ -1,4 +1,4 @@
-// UC 10 Object Creation
+// UC 11 Object Operations using Arrow Functions.  
 
 const MAX_HRS_IN_MONTH = 160;
 const NUM_OF_WORKING_DAYS = 20;
@@ -46,3 +46,31 @@ while (totalEmpHrs <= MAX_HRS_IN_MONTH &&
         });
 }
 console.log("UC 10 Showing Daily hours Worked and wage earned: " + empDailyHrsAndWageArr);
+
+//UC 11A - Daily hours worked and wages earned.
+let totalWage = empDailyHrsAndWageArr.reduce((totalWage, dailyHrsAndWage) => {
+    return totalWage += dailyHrsAndWage.dailyWage;
+}, 0);
+
+let totalHours = empDailyHrsAndWageArr.reduce((totalHours, dailyHrsAndWage) => {
+    return totalHours += dailyHrsAndWage.dailyHours;
+}, 0);
+console.log("UC 11A Total Hours : " + totalHours + " Total Wage : " + totalWage);
+
+//UC 11B - Showing full working days using forEach.
+process.stdout.write("UC 11B Logging full working days");
+empDailyHrsAndWageArr.filter(dailyHrsAndWage => dailyHrsAndWage.dailyHours == 8)
+    .forEach(dailyHrsAndWage => process.stdout.write(dailyHrsAndWage.toString()));
+
+//UC 11C - Part time working days.
+let partWorkingDayStrArr = empDailyHrsAndWageArr
+    .filter(dailyHrsAndWage => dailyHrsAndWage.dailyHours == 4)
+    .map(dailyHrsAndWage => dailyHrsAndWage.toString());
+console.log("\nUC 11C PartTimeWorkingDaysString : " + partWorkingDayStrArr);
+
+//UC 11D - Non Working Days usin Map function.
+let nonWorkingDaysNums = empDailyHrsAndWageArr
+.filter(dailyHrsAndWage => dailyHrsAndWage.dailyHours == 0)
+.map(dailyHrsAndWage => dailyHrsAndWage.dayNum);
+console.log("UC 11D NonWorkingDaysNums : "+nonWorkingDaysNums);
+
